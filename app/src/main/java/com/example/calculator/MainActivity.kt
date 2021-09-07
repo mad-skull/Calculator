@@ -19,4 +19,15 @@ class MainActivity : AppCompatActivity() {
     fun onClear(view: View) {
         tvInput.text = ""
     }
+
+    var lastNumeric: Boolean = false
+    var lastDot: Boolean = false
+
+    fun onDecimal(view: View) {
+        if ( lastNumeric && !lastDot) {
+            tvInput.append(".")
+            lastNumeric = false
+            lastDot = true
+        }
+    }
 }

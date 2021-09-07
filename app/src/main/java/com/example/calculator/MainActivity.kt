@@ -15,4 +15,8 @@ class MainActivity : AppCompatActivity() {
     fun onDigit(view: View) {
         tvInput.append((view as Button).text)
     }
+
+    fun onClear(view: View) {
+        tvInput.text = ""
+    }
 }

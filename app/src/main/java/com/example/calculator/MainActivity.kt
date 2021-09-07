@@ -14,10 +14,13 @@ class MainActivity : AppCompatActivity() {
 
     fun onDigit(view: View) {
         tvInput.append((view as Button).text)
+        lastNumeric = true
     }
 
     fun onClear(view: View) {
         tvInput.text = ""
+        lastNumeric = false
+        lastDot = false
     }
 
     var lastNumeric: Boolean = false

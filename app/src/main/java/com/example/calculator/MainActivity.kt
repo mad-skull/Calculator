@@ -16,9 +16,6 @@ class MainActivity : AppCompatActivity() {
     fun onDigit(view: View) {
         tvInput.append((view as Button).text)
         lastNumeric = true
-
-        if(tvInput.text.contains("1"))
-            tvInput.text = "Haha"
     }
 
     fun onClear(view: View) {
